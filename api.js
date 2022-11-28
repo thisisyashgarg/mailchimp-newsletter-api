@@ -20,8 +20,6 @@ app.post('/', (req, res) =>{
     const lastName = req.body.lName;
     const email = req.body.email;
     
-    //sending data
-    // const url = 'https://us14.api.mailchimp.com/3.0/lists/{list_id}';
     client.setConfig({
         apiKey: process.env.apiKey,
         server: process.env.urlPrefix,
@@ -53,7 +51,7 @@ app.post('/', (req, res) =>{
     res.send('subscribed');  
 });   
 
-app.listen(process.env.PORT || 3000 , () => console.log('3000'));
+app.listen(3000 , () => console.log('3000'));
 
 
 
